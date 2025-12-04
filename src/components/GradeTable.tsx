@@ -23,12 +23,13 @@ export default function GradeTable() {
   return (
     <table className="table">
       <thead>
-        <tr className="table-content">
-          <th>Nome</th>
-          <th>Sim1</th>
-          <th>Sim2</th>
-          <th>Prova</th>
-          <th>Média</th>
+        <tr>
+          <th style={{ width: "20%" }}>Nome</th>
+          <th style={{ width: "15%" }}>Sim1</th>
+          <th style={{ width: "15%" }}>Sim2</th>
+          <th style={{ width: "15%" }}>Prova</th>
+          <th style={{ width: "15%" }}>Média</th>
+          <th style={{ width: "20%" }}>Ações</th>
         </tr>
       </thead>
 
@@ -36,7 +37,7 @@ export default function GradeTable() {
         {grades.map(g => {
           const m = media(g);
           return (
-            <tr key={g.id} className="Table">
+            <tr key={g.id} className={m >= 6 ? "ok" : "bad"}>
               <td>{g.nome}</td>
               <td>{g.simulado1}</td>
               <td>{g.simulado2}</td>
