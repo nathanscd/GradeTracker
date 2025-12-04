@@ -36,7 +36,9 @@ export default function GradeForm() {
       <input placeholder="Simulado 1" value={sim1} onChange={e => setSim1(e.target.value)} />
       <input placeholder="Simulado 2" value={sim2} onChange={e => setSim2(e.target.value)} />
       <input placeholder="Prova" value={prova} onChange={e => setProva(e.target.value)} />
-      <button type="submit">Salvar</button>
+      <button type="submit" onClick={() => window.location.reload()}>
+        Salvar
+      </button>
     </form>
   );
 }

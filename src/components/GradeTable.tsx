@@ -43,7 +43,12 @@ export default function GradeTable() {
               <td>{g.prova}</td>
               <td>{m.toFixed(1)}</td>
               <td>
-                <button onClick={() => removeGrade(g.id)}>Remover</button>
+                <button onClick={() => { 
+                  removeGrade(g.id); 
+                  window.location.reload(); 
+                }}>
+                  Remover
+                </button>
               </td>
             </tr>
           );

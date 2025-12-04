@@ -1,54 +1,134 @@
 body {
   margin: 0;
-  background: #000000;
-  color: white;
+  padding: 0;
+  background: #0f0f17;
   font-family: Arial, sans-serif;
+  color: white;
 }
 
-.page {
+*{
+  transition: all 0.3s ease;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-h1 {
-  margin-bottom: 20px;
-}
-
-form.form {
+.header {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 280px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-form.form input {
-  padding: 8px;
-  border: 1px solid #ccc;
-}
-
-form.form button {
-  padding: 10px;
+.settings-btn {
+  background: #8e44ff;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
   border: none;
-  background: #333;
+  cursor: pointer;
+}
+
+.card {
+  background: #161622;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 20px #00000080;
+}
+
+.grade-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grade-table th,
+.grade-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.grade-table tr.ok {
+  background: #12291d;
+}
+
+.grade-table tr.bad {
+  background: #291212;
+}
+
+.remove-btn {
+  background: #ff4d4d;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
   color: white;
   cursor: pointer;
 }
 
-.table {
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  border-collapse: collapse;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #1d1d2a;
+  padding: 30px;
+  border-radius: 12px;
+  min-width: 300px;
+}
+
+.close-btn {
   margin-top: 20px;
-}
-
-.table th,
-.table td {
-  border: 1px solid #ccc;
   padding: 10px;
+  width: 100%;
+  background: #444;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
-.ok {
-  background: #006c17;
+.setting-item {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.bad {
-  background: #570000;
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 9vw;
+  padding: 2vw;
+  border-radius: .8vw;
+  background-color: rgb(33, 24, 38);
+  gap: .6w;
+}
+
+.form > input{
+  background-color: #ffffff;
+  border: solid 0.1 white;
+  padding: .4vw;
+  border-radius: .2vw;
+  transition: all 0.3s ease;
+}
+
+.form > input:hover{
+  transform: translateY(-2px);
+  border: solid 0.1px rgba(255, 0, 0, 0.312);
+}
+
+.form > input:focus{
+  border: solid 0.1px rgba(255, 0, 0, 0.312);
+  outline: none;
 }
