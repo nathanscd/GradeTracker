@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  background: #000000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 280px;
+}
+
+form.form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+form.form button {
+  padding: 10px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.ok {
+  background: #006c17;
+}
+
+.bad {
+  background: #570000;
+}
