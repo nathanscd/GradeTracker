@@ -39,6 +39,24 @@ body {
   box-shadow: 0px 0px 20px #00000080;
 }
 
+.table-content{
+  display: flex;
+  gap: 1vw;
+  background-color: #0f0f17;
+  padding: 1vw;
+  border-radius: 1vw 1vw 0vw 0vw;
+  border: solid 0.1px rgba(255,255,255,0.200);
+}
+
+.Table{
+  display: flex;
+  gap: 2.1vw;
+  background-color: #0f0f17;
+  padding: 1vw;
+  border-radius: 0px 0px 1vw 1vw;
+  border: solid 0.1px rgba(255,255,255,0.200);
+}
+
 .grade-table {
   width: 100%;
   border-collapse: collapse;
@@ -111,24 +129,47 @@ body {
   max-width: 9vw;
   padding: 2vw;
   border-radius: .8vw;
-  background-color: rgb(33, 24, 38);
-  gap: .6w;
+  background-color: #161622;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.300);
+  gap: 1vw;
+  border: solid rgba(255, 255, 255, 0.209) 0.1px;
+  transition: all 0.3s ease;
+}
+
+.form:hover{
+  box-shadow: none;
 }
 
 .form > input{
-  background-color: #ffffff;
-  border: solid 0.1 white;
+  background-color: #3e3e3e;
+  border: solid 0.1px rgba(255, 255, 255, 0.207);
   padding: .4vw;
+  color: rgb(78, 3, 3);
   border-radius: .2vw;
   transition: all 0.3s ease;
 }
 
 .form > input:hover{
   transform: translateY(-2px);
-  border: solid 0.1px rgba(255, 0, 0, 0.312);
+  border: solid 0.1px rgba(191, 0, 255, 0.312);
 }
 
 .form > input:focus{
   border: solid 0.1px rgba(255, 0, 0, 0.312);
   outline: none;
+  color: white;
+}
+
+.btn{
+  background-color: #0f0f17;
+  border: solid rgba(255, 255, 255, 0.209) 0.1px;
+  color: white;
+  margin-top: 10px;
+  padding: .3vw .9vw;
+  border-radius: .5w;
+  cursor: pointer;
+}
+
+.btn:hover{
+  transform: translateY(-2px);
 }

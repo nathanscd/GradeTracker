@@ -23,7 +23,7 @@ export default function GradeTable() {
   return (
     <table className="table">
       <thead>
-        <tr>
+        <tr className="table-content">
           <th>Nome</th>
           <th>Sim1</th>
           <th>Sim2</th>
@@ -36,7 +36,7 @@ export default function GradeTable() {
         {grades.map(g => {
           const m = media(g);
           return (
-            <tr key={g.id} className={m >= 6 ? "ok" : "bad"}>
+            <tr key={g.id} className="Table">
               <td>{g.nome}</td>
               <td>{g.simulado1}</td>
               <td>{g.simulado2}</td>
