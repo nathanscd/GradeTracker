@@ -5,7 +5,7 @@ import { getGrades, saveGrades } from "../services/storage";
 export default function GradeTable() {
   const [grades, setGrades] = useState<Grade[]>([]);
 
-  useEffect(() => {
+  useEffect(() => { 
     setGrades(getGrades());
   }, []);
 

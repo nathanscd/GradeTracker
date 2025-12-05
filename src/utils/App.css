@@ -106,7 +106,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
   background: #00000080;
   display: flex;
   justify-content: center;
@@ -141,26 +141,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 9vw;
   padding: 2vw;
   border-radius: .8vw;
-  background-color: #161622;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.300);
+  background: none;
   gap: 1vw;
-  border: solid rgba(255, 255, 255, 0.209) 0.1px;
   transition: all 0.3s ease;
 }
 
-.form:hover{
-  box-shadow: none;
-}
-
 .form > input{
-  background-color: #3e3e3e;
+  background-color: #3e3e3e5a;
+  backdrop-filter: blur(10px);
   border: solid 0.1px rgba(255, 255, 255, 0.207);
-  padding: .4vw;
+  width: 30vw;
+  padding: .8vw;
   color: rgb(78, 3, 3);
-  border-radius: .2vw;
+  border-radius: .5vw;
   transition: all 0.3s ease;
 }
 
@@ -187,4 +182,30 @@ body {
 
 .btn:hover{
   transform: translateY(-2px);
+}
+
+.add-btn {
+  background: #4876ff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal.large {
+  max-width: 800px;
+  width: 90%;
+}
+
+.modal{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 0, 128, 0.39);
+  backdrop-filter: blur(25px);
+  border: solid 0.1px rgba(255, 255, 255, 0.119);
+  box-shadow: 0px 0px 10px 20px rgba(0, 0, 0, 0.200);
 }

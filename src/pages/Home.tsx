@@ -1,19 +1,28 @@
 import { useState } from "react";
 import GradeTable from "../components/GradeTable";
-import GradeForm from "../components/GradeForm";
 import GradeChart from "../components/GradeChart";
 import SettingsModal from "../components/SettingsModal";
+import GradeFormModal from "../components/GradeFormModal";
 
 export default function Home() {
   const [openSettings, setOpenSettings] = useState(false);
+  const [openForm, setOpenForm] = useState(false);
 
   return (
     <>
-      <div className="app-container">
-        <div className="header">
-          <h1>GradeTracker</h1>
-          <button className="settings-btn" onClick={() => setOpenSettings(true)}>Configurações</button>
+      <div className="card">
+        <h1>GradeTracker</h1>
+
+        <div style={{ display: "flex", gap: "10px" }}>
+          <button className="settings-btn" onClick={() => setOpenSettings(true)}>
+            Configurações
+          </button>
+
+          <button className="add-btn" onClick={() => setOpenForm(true)}>
+            Adicionar Disciplina
+          </button>
         </div>
+      </div>
 
       <div className="card">
         <h1>Dashboard</h1>
@@ -25,13 +34,13 @@ export default function Home() {
         <GradeChart />
       </div>
 
-      <div className="card">
-        <h1>Adicionar Nota</h1>
-        <GradeForm />
-      </div>
+      {openSettings && (
+        <SettingsModal close={() => setOpenSettings(false)} />
+      )}
 
-      {openSettings && <SettingsModal close={() => setOpenSettings(false)} />}
-    </div>
+      {openForm && (
+        <GradeFormModal close={() => setOpenForm(false)} />
+      )}
     </>
   );
 }
