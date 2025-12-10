@@ -72,7 +72,7 @@ src/
 ## Motivação
 Esse projeto foi recriado para ficar mais próximo de um ambiente real de desenvolvimento com React + Vite + TypeScript. A ideia é torná-lo mais escalável, limpo e fácil de entender — servindo tanto como app pessoal quanto como prática sólida de front-end moderno.
 
-## Melhorias Futuras (opcional)
+## Melhorias Futuras
 Edição de notas diretamente na tabela.
 Modal para detalhes avançados.
 Gráficos de desempenho (com Recharts ou Chart.js).
